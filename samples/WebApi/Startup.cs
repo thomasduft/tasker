@@ -3,7 +3,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using WebApi.Engine;
+using Microsoft.Extensions.Options;
+using tomware.Tasker.AspNetCoreEngine;
+using tomware.Tasker.Core;
+using WebApi.Tasks;
 
 namespace WebApi
 {
@@ -19,7 +22,12 @@ namespace WebApi
     // This method gets called by the runtime. Use this method to add services to the container.
     public void ConfigureServices(IServiceCollection services)
     {
-      services.AddTaskerEngineServices();
+      var workerConfiguration = this.GetWorkerConfiguration(services);
+      services.AddTaskerEngineServices(workerConfiguration.Value);
+
+      // Tasks
+      services.AddTransient<ITaskDefinition, AlwaysRunningTask>();
+      services.AddTransient<ITaskDefinition, MinuteRunningTask>();
 
       services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
     }
@@ -39,6 +47,16 @@ namespace WebApi
 
       app.UseHttpsRedirection();
       app.UseMvc();
+    }
+
+    private IOptions<WorkerConfiguration> GetWorkerConfiguration(IServiceCollection services)
+    {
+      var worker = this.Configuration.GetSection("Worker");
+      services.Configure<WorkerConfiguration>(worker);
+
+      return services
+      .BuildServiceProvider()
+      .GetRequiredService<IOptions<WorkerConfiguration>>();
     }
   }
 }

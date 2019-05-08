@@ -1,10 +1,8 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using tomware.Tasker.Core;
-using WebApi.Engine.Common;
-using WebApi.Engine.Services;
 
-namespace WebApi.Engine
+namespace tomware.Tasker.AspNetCoreEngine
 {
   public static class EngineServiceExtensions
   {

@@ -8,6 +8,6 @@ namespace tomware.Tasker.Core
 
     string ScheduleExpression { get; }
 
-    Task ExecuteAsync(TaskContext context = null);
+    Task ExecuteAsync(TaskContext context);
   }
 }

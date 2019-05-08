@@ -1,4 +1,4 @@
-namespace WebApi.Engine.Common
+namespace tomware.Tasker.AspNetCoreEngine
 {
   public class WorkerConfiguration
   {
