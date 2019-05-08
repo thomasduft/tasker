@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <Authors>Thomas Duft</Authors>
     <Company>tomWare SOLUTIONS</Company>
-    <Description>A simple in memory task library.</Description>
+    <Description>A simple task library to be used with .NET Core.</Description>
   </PropertyGroup>
 
   <ItemGroup>
