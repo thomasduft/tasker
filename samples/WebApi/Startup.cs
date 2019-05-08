@@ -5,7 +5,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using tomware.Tasker.AspNetCoreEngine;
-using tomware.Tasker.Core;
 using WebApi.Tasks;
 
 namespace WebApi

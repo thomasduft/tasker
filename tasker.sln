@@ -5,15 +5,15 @@ VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5883FC99-E194-4F41-8645-8EE2C4E18EEF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tasker.Core", "src\tasker.Core\tasker.Core.csproj", "{EC3DF313-A3A3-42BD-8102-C50ADFC4AE5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tasker.AspNetCoreEngine", "src\tasker.AspNetCoreEngine\tasker.AspNetCoreEngine.csproj", "{54D70B84-7098-4822-9867-C0EF07420916}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tasker.AspNetCoreEngine", "src\tasker.AspNetCoreEngine\tasker.AspNetCoreEngine.csproj", "{54D70B84-7098-4822-9867-C0EF07420916}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tasker.Tests", "test\tasker.Tests.csproj", "{7CC5F35A-93C3-437C-B004-BC35C5782AA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tasker.Tests", "test\tasker.Tests.csproj", "{7CC5F35A-93C3-437C-B004-BC35C5782AA5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{0552AD01-DE1D-4131-9466-0D3975490F1A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "samples\WebApi\WebApi.csproj", "{69B8181B-675F-4D04-ADA2-4B8E2EF5951F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "samples\WebApi\WebApi.csproj", "{69B8181B-675F-4D04-ADA2-4B8E2EF5951F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{AABB7EEC-E1EB-444A-A957-EB38F8DB7AEE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,18 +25,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EC3DF313-A3A3-42BD-8102-C50ADFC4AE5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EC3DF313-A3A3-42BD-8102-C50ADFC4AE5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EC3DF313-A3A3-42BD-8102-C50ADFC4AE5E}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{EC3DF313-A3A3-42BD-8102-C50ADFC4AE5E}.Debug|x64.Build.0 = Debug|Any CPU
-		{EC3DF313-A3A3-42BD-8102-C50ADFC4AE5E}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{EC3DF313-A3A3-42BD-8102-C50ADFC4AE5E}.Debug|x86.Build.0 = Debug|Any CPU
-		{EC3DF313-A3A3-42BD-8102-C50ADFC4AE5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EC3DF313-A3A3-42BD-8102-C50ADFC4AE5E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EC3DF313-A3A3-42BD-8102-C50ADFC4AE5E}.Release|x64.ActiveCfg = Release|Any CPU
-		{EC3DF313-A3A3-42BD-8102-C50ADFC4AE5E}.Release|x64.Build.0 = Release|Any CPU
-		{EC3DF313-A3A3-42BD-8102-C50ADFC4AE5E}.Release|x86.ActiveCfg = Release|Any CPU
-		{EC3DF313-A3A3-42BD-8102-C50ADFC4AE5E}.Release|x86.Build.0 = Release|Any CPU
 		{54D70B84-7098-4822-9867-C0EF07420916}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{54D70B84-7098-4822-9867-C0EF07420916}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54D70B84-7098-4822-9867-C0EF07420916}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -78,8 +66,8 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{EC3DF313-A3A3-42BD-8102-C50ADFC4AE5E} = {5883FC99-E194-4F41-8645-8EE2C4E18EEF}
 		{54D70B84-7098-4822-9867-C0EF07420916} = {5883FC99-E194-4F41-8645-8EE2C4E18EEF}
+		{7CC5F35A-93C3-437C-B004-BC35C5782AA5} = {AABB7EEC-E1EB-444A-A957-EB38F8DB7AEE}
 		{69B8181B-675F-4D04-ADA2-4B8E2EF5951F} = {0552AD01-DE1D-4131-9466-0D3975490F1A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution

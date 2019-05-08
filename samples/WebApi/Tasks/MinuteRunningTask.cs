@@ -1,7 +1,7 @@
 using System;
 using System.Threading.Tasks;
 using tomware.Microcron.Core;
-using tomware.Tasker.Core;
+using tomware.Tasker.AspNetCoreEngine;
 
 namespace WebApi.Tasks
 {

@@ -1,6 +1,5 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using tomware.Tasker.Core;
 
 namespace tomware.Tasker.AspNetCoreEngine
 {

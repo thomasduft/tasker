@@ -1,6 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Threading.Tasks;
-using tomware.Tasker.Core;
+using tomware.Tasker.AspNetCoreEngine;
 using tomware.Tasker.Tests.Tasks;
 
 namespace tomware.Tasker.Tests.Core
