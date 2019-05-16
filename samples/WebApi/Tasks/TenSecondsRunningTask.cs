@@ -5,11 +5,11 @@ using tomware.Tasker.AspNetCoreEngine;
 
 namespace WebApi.Tasks
 {
-  public class MinuteRunningTask : ITaskDefinition
+  public class TenSecondsRunningTask : ITaskDefinition
   {
-    public string Type => nameof(MinuteRunningTask);
+    public string Type => nameof(TenSecondsRunningTask);
 
-    public string ScheduleExpression => Expressions.DEFAULT_EXPRESSION;
+    public string ScheduleExpression => "0,10,20,30,40,50 * * * * *";
 
     public async Task ExecuteAsync(TaskContext context)
     {

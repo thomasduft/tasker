@@ -27,6 +27,7 @@ namespace WebApi
       // Tasks
       services.AddTransient<ITaskDefinition, AlwaysRunningTask>();
       services.AddTransient<ITaskDefinition, MinuteRunningTask>();
+      services.AddTransient<ITaskDefinition, TenSecondsRunningTask>();
 
       services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
     }

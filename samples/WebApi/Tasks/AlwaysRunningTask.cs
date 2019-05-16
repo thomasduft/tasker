@@ -6,13 +6,13 @@ namespace WebApi.Tasks
 {
   public class AlwaysRunningTask : ITaskDefinition
   {
-    public string Type => "AlwaysRunningTask";
+    public string Type => nameof(AlwaysRunningTask);
 
     public string ScheduleExpression => null;
 
     public async Task ExecuteAsync(TaskContext context)
     {
-      Console.WriteLine($"{DateTime.Now}: Hello from AlwaysRunningTask...");
+      Console.WriteLine($"{DateTime.Now}: Hello from ${this.Type}...");
 
       await Task.CompletedTask;
     }
