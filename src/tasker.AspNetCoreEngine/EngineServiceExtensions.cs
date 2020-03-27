@@ -7,17 +7,17 @@ namespace tomware.Tasker.AspNetCoreEngine
   {
     public static IServiceCollection AddTaskerEngineServices(
       this IServiceCollection services,
-      WorkerConfiguration workerConfiguration = null
+      TaskerConfiguration taskerConfiguration = null
     )
     {
-      workerConfiguration = workerConfiguration ?? new WorkerConfiguration();
-      services.Configure<WorkerConfiguration>(config =>
+      taskerConfiguration = taskerConfiguration ?? new TaskerConfiguration();
+      services.Configure<TaskerConfiguration>(opt =>
       {
-        config.Enabled = workerConfiguration.Enabled;
-        config.Interval = workerConfiguration.Interval;
+        opt.Enabled = taskerConfiguration.Enabled;
+        opt.Interval = taskerConfiguration.Interval;
       });
 
-      services.AddSingleton<IHostedService, Worker>();
+      services.AddSingleton<IHostedService, Tasker>();
 
       services.AddScoped<ITaskDefinitionProvider, TaskDefinitionProvider>();
 

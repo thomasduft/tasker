@@ -1,6 +1,5 @@
 using System;
 using System.Threading.Tasks;
-using tomware.Microcron.Core;
 using tomware.Tasker.AspNetCoreEngine;
 
 namespace WebApi.Tasks
@@ -13,7 +12,7 @@ namespace WebApi.Tasks
 
     public async Task ExecuteAsync(TaskContext context)
     {
-      Console.WriteLine($"{DateTime.Now}: Hello from ${this.Type}...");
+      Console.WriteLine($"{DateTime.Now}: Hello from {this.Type}...");
 
       await Task.CompletedTask;
     }

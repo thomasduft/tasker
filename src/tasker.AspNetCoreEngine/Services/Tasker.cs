@@ -19,18 +19,18 @@ namespace tomware.Tasker.AspNetCoreEngine
     public DateTime? NextExecution { get; set; }
   }
 
-  public class Worker : BackgroundService
+  public class Tasker : BackgroundService
   {
-    private readonly ILogger<Worker> logger;
-    private readonly WorkerConfiguration options;
+    private readonly ILogger<Tasker> logger;
+    private readonly TaskerConfiguration options;
     private readonly IServiceScopeFactory serviceScopeFactory;
 
     private IEnumerable<ITaskDefinition> taskDefinitions;
     private ConcurrentDictionary<string, TaskItem> taskItems;
 
-    public Worker(
-      ILogger<Worker> logger,
-      IOptions<WorkerConfiguration> options,
+    public Tasker(
+      ILogger<Tasker> logger,
+      IOptions<TaskerConfiguration> options,
       IServiceScopeFactory serviceScopeFactory
     )
     {
@@ -125,7 +125,7 @@ namespace tomware.Tasker.AspNetCoreEngine
 
         var taskDefinition = taskDefinitionProvider.GetTaskDefinition(type);
 
-        await Task.Run(() => taskDefinition.ExecuteAsync(null));
+        await taskDefinition.ExecuteAsync(null).ConfigureAwait(false);
       }
     }
   }
